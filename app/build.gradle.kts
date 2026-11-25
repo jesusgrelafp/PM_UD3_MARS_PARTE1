@@ -18,7 +18,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.23"
+    id("org.jetbrains.kotlin.plugin.serialization")
 }
 
 android {
@@ -81,13 +81,14 @@ dependencies {
         debugImplementation("androidx.compose.ui:ui-tooling")
 
         // Retrofit
-        implementation("com.squareup.retrofit2:retrofit:2.11.0")
+        implementation("com.squareup.retrofit2:retrofit:3.0.0")
         // Retrofit + Kotlin Serialization converter
-        implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")
+        implementation("com.squareup.retrofit2:converter-kotlinx-serialization:3.0.0")
         // OkHttp
         implementation("com.squareup.okhttp3:okhttp:4.12.0")
         // Kotlin serialization (versión existente y compatible)
-        implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.12.0")
+
 
 }
 
